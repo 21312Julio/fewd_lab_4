@@ -1,56 +1,57 @@
-var hotel = {
-    // Object properties
-    name: 'P O P P Y',
-    rooms: 25,
-    booked: 3,
-    gym: true,
-    roomTypes: ['double', 'twin', 'suite', 'king'],
+var tour = {
+    name: 'I DISAGREE',
+    venues: 20,
+    fullyBooked: 16,
+    meetAndGreet: true,
+    venueTypes: ['standard', 'VIP'],
     checkAvailablity: function() {
-        return this.rooms - this.booked;
+        return this.venues - this.fullyBooked;
     }
 };
 
-var elName = document.getElementById('hotelName');
-elName.textContent = hotel.name;
+var elTour = document.getElementById('tourName');
+elTour.textContent = tour.name;
 
-var elRooms = document.getElementById('rooms');
-elRooms.textContent = hotel.checkAvailablity();
+var elVenue = document.getElementById('venues');
+elVenue.textContent = tour.checkAvailablity();
 
 //-----------------
 
-// Define a constructor function template for hotels
-function Hotel(name, rooms, booked) {
-    // Object properties
-    this.name = name;
-    this.rooms = rooms;
+function Venue(city, capacity, booked, vip) {
+    this.city = city;
+    this.capacity = capacity;
     this.booked = booked;
+    this.vip = vip;
     this.checkAvailablity = function() {
-        return this.rooms - this.booked;
+        return this.capacity - this.booked;
     };
 }
 
-// Define to instances of the hotel and their arguments
-var Dublin = new Hotel('Dublin', 20, 3);
-var London = new Hotel('London', 15, 5);
-var Chicago = new Hotel('Chicago', 30, 2);
-var NY = new Hotel('New York', 50, 39);
+var chicagoVenue = new Venue('Chicago/USA', 30, 13, false);
+var dublinVenue = new Venue('Dublin/IE', 40, 24, true);
+var losAngelesVenue = new Venue('LA/USA', 45, 40, true);
+var parisVenue = new Venue('Paris/FR', 25, 5, false);
 
-var details1 = Dublin.name + ' TICKETS: ';
-    details1 += Dublin.checkAvailablity();
-var elHotel1 = document.getElementById('hotel1');
-elHotel1.textContent = details1;
+var details1 = chicagoVenue.city + ' Tickets: ';
+    details1 += chicagoVenue.checkAvailablity();
+    details1 += ' VIP: ' + chicagoVenue.vip;
+var elVenue1 = document.getElementById('venue1');
+elVenue1.textContent = details1;
 
-var details2 = London.name + ' TICKETS: ';
-    details2 += London.checkAvailablity();
-var elHotel2 = document.getElementById('hotel2');
-elHotel2.textContent = details2;
+var details2= dublinVenue.city + ' Tickets: ';
+    details2 += dublinVenue.checkAvailablity();
+    details2 += ' VIP: ' + dublinVenue.vip;
+var elVenue2 = document.getElementById('venue2');
+elVenue2.textContent = details2;
 
-var details3 = Chicago.name + ' TICKETS: ';
-    details3 += Chicago.checkAvailablity();
-var elHotel3 = document.getElementById('hotel3');
-elHotel3.textContent = details3;
+var details3 = losAngelesVenue.city + ' Tickets: ';
+    details3 += losAngelesVenue.checkAvailablity();
+    details3 += ' VIP: ' + losAngelesVenue.vip;
+var elVenue3 = document.getElementById('venue3');
+elVenue3.textContent = details3;
 
-var details4 = NY.name + ' TICKETS: ';
-    details4 += NY.checkAvailablity();
-var elHotel4 = document.getElementById('hotel4');
-elHotel4.textContent = details4;
+var details4 = parisVenue.city + ' Tickets: ';
+    details4 += parisVenue.checkAvailablity();
+    details4 += ' VIP: ' + parisVenue.vip;
+var elVenue4 = document.getElementById('venue4');
+elVenue4.textContent = details4;

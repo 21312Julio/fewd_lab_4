@@ -1,32 +1,38 @@
 @import url(http://fonts.googleapis.com/css?family=Open+Sans);
 
 body {
-  background-color: #fff;
-  background: url("../images/poppy-background.jpg") no-repeat center center fixed;
+  background: url("../images/background.jpg") no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
   margin: 0;
-  font-family: 'Open Sans', sans-serif;}
+  font-family: 'Courier New', Courier, monospace;}
 
-img.animated-gif{
-  padding-top: 30%;
-  padding-left: 5%;
-  width: 200px;
-  height: auto;
+#logo {
+    width: 10%;
+    height: auto;
+    padding-left: 20px;
 }
 
-h2 {
+h3 {
   margin: 1.75em 0 0 0;
-  color: #1e1b1e; 
-  font-weight: normal;}
+  color: #000000; 
+  font-weight: normal;
+  font-family: fantasy;}
 
-h2 + p {
+p {
+  color: #ffffff;
+  background-color: #000000;
+  letter-spacing: 5px;
+  font-size: 120%;
+}
+
+h3 + p {
   margin: 0.25em 0 0 0;}
 p + p {
   margin: 0;}
-p + h2 {
+p + h3 {
   margin: 10px 0 0 0;}
 
 /* message under the logo */
@@ -43,45 +49,49 @@ p + h2 {
 /* black bar across the right hand side of the page */
 
 #info {
-  background-color: #fff;
+  background-color: #ffffff;
   color: #1e1b1e;
-  width: 200px;
+  width: 30%;
   padding: 0 15px;
   text-align: center;
   min-height: 100%;
   position: absolute;
   top: 0;
-  right: 15%;}
+  right: 0%;}
 
 /* details in the black bar */
 
-#hotelName {
+#tourName {
   text-transform: uppercase;
-  text-align: center; 
+  background-color: #000000;
+  color: #ffffff;
+  text-align: center;
+  letter-spacing: 5px; 
   font-size: 120%;
-  margin-top: 10px;
-  border-top: 1px solid #1e1b1e;
-  border-bottom: 1px solid #1e1b1e; 
-  padding: 10px 0;}
+  margin-top: 10px; 
+  padding: 5    px 0;}
 
-#hotel1 {
+#venue1 {
   margin-top: 1em; 
-  border-top: 1px solid #1e1b1e; 
+  border-top: 1px solid #fff; 
   padding-top: 1em;
+  padding-bottom: 1em;} 
+#venue2 {
+  border-bottom: 1px solid #fff; 
   padding-bottom: 1em;}
-#hotel2 {
+#venue3 {
+  border-bottom: 1px solid #fff; 
   padding-bottom: 1em;}
-#hotel3 {
-  padding-bottom: 1em;}
-#hotel4 {
-  border-bottom: 1px solid #1e1b1e; 
+#venue4 {
+  border-bottom: 1px solid #fff; 
   padding-bottom: 1em;}
 
-#rooms {
-  font-size: 440%;
-  color: #1e1b1e;
-  display: inline-block;
-  margin: 0;}
+#venues {
+  font-size: 500%;
+  color: #ffffff;
+  background-color: #000000;
+  margin: 0;
+  padding-top: 0px;}
 
 #roomRate{
   text-decoration: line-through;
@@ -91,14 +101,14 @@ p + h2 {
 
 #specialRate {  
   font-size: 440%;
-  color: #1e1b1e;
+  color: #ffb87a;
   display: inline-block;
   padding: 10px 0 20px 0;
   margin: 0;}
 
 #offerEnds {
   text-transform: uppercase;
-  color: #1e1b1e;
+  color: #ffb87a;
   font-size: 75%;}
 
 .true, .false {
